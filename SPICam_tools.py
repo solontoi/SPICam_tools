@@ -12,10 +12,10 @@ SPICam webpage.
 
 def exposuretime(m, snr, airmass):
     # c constant in ugriz
-    c = array([21.38, 24.92, 24.93, 24.72, 23.43])
+    c = np.array([21.38, 24.92, 24.93, 24.72, 23.43])
     
     # k constants in ugriz
-    k = array([0.48, 0.19, 0.11, 0.04, 0.06])
+    k = np.array([0.48, 0.19, 0.11, 0.04, 0.06])
     
     # flux calculation
     flux = 10.**( (m - c + k*(airmass-1))/(-2.5) )
